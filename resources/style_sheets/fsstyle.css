@@ -48,3 +48,52 @@ a:hover {
         background: #f1f1f1; 
 		box-shadow: 5px 5px 2px #888888;
 }
+
+#navigation>div:hover{ 
+        height: auto; 
+        width: auto; 
+		font-size: 14px;
+        border-radius: 4px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #d0d0d0;
+        margin-left: 5px;
+		padding: 4px;
+        float: left; /*Here you can also use display: inline-block instead of float:left*/
+		background: #f1f1f1;
+        background-color: #ACACAC; 
+		box-shadow: 5px 5px 2px #888888;
+}
+
+#navigation>div>a:link{ 
+       text-decoration: none;
+}
+
+#navigation>div>a:visited{ 
+       text-decoration: none;
+}
+
+#navigation>div>a:hover{ 
+        color: white;
+}
+
+.activelink{
+	    height: auto; 
+        width: auto; 
+		font-size: 14px;
+        border-radius: 4px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #d0d0d0;
+        margin-left: 5px;
+		padding: 4px;
+        float: left; /*Here you can also use display: inline-block instead of float:left*/
+		background: #f1f1f1;
+        background-color: #ACACAC !important;
+		box-shadow: 5px 5px 2px #888888;
+		text-decoration: none;
+}
+
+.activelink>a{
+	color: white;
+}
