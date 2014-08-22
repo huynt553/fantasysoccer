@@ -1,6 +1,12 @@
 body {
-	background-image: url("../images/bgimage.jpg");
+	/*background-image: url("../images/bgimage.jpg");*/
     background-attachment: fixed;
     background-position: center; 
-	background-color: black;
+	/*background-color: black;*/
+}
+
+#header {
+	background-image: url("../images/banner.png");
+	width: 728px;
+	height: 90px;
 }

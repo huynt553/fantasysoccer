@@ -9,7 +9,10 @@
 <link href="resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
 <body>
-
+<div id="header" width="auto" height="auto">
+	
+</div>
+		
 
 </body>
 </html>
