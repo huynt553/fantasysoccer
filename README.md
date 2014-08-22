@@ -1,4 +1,5 @@
-fantasysoccer
+=============
+Fantasy Soccer H2H Scoring + Draft Mode
 =============
 
-Fantasy Soccer
+Fantasy Soccer (C) 2014
