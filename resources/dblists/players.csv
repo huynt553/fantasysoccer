@@ -1,0 +1,36 @@
+first_name,last_name,number,team,position
+Claudio,Bravo,13,FC Barcelona,Goalkeeper
+Jordi,Alba,18,FC Barcelona,Defender
+Gerard,Pique,3,FC Barcelona,Defender
+Javier,Mascherano,14,FC Barcelona,Defender
+Dani,Alves,22,FC Barcelona,Defender
+N/A,Xavi,8,FC Barcelona,Midfielder
+Andres,Iniesta,6,FC Barcelona,Midfielder
+Sergio,Busquets,16,FC Barcelona,Midfielder
+N/A,Neymar,11,FC Barcelona,Forward
+Lionel,Messi,10,FC Barcelona,Forward
+Luis,Suarez,9,FC Barcelona,Forward
+Iker,Casillas,1,Real Madrid,Goalkeeper
+N/A,Marcelo,12,Real Madrid,Defender
+Sergio,Ramos,4,Real Madrid,Defender
+N/A,Pepe,3,Real Madrid,Defender
+Daniel,Carvajal,15,Real Madrid,Defender
+Toni,Kroos,8,Real Madrid,Midfielder
+Luka,Modric,19,Real Madrid,Midfielder
+James,Rodriguez,10,Real Madrid,Midfielder
+Cristiano,Ronaldo,7,Real Madrid,Forward
+Karim,Benzema,9,Real Madrid,Forward
+Gareth,Bale,11,Real Madrid,Forward
+Thibaut,Courtois,13,Chelsea,Goalkeeper
+Branislav,Ivanovic,2,Chelsea,Defender
+Filipe,Luis,3,Chelsea,Defender
+John,Terry,26,Chelsea,Defender
+Gary,Cahill,24,Chelsea,Defender
+N/A,Ramires,7,Chelsea,Midfielder
+N/A,Oscar,8,Chelsea,Midfielder
+Eden,Hazard,10,Chelsea,Midfielder
+Cesc,Fabregas,4,Chelsea,Midfielder
+Diego,Costa,19,Chelsea,Forward
+Andre,Schurrle,14,Chelsea,Forward
+Didier,Drogba,11,Chelsea,Forward
+Fernando,Torres,9,Chelsea,Forward
