@@ -105,6 +105,14 @@ a:hover {
 	border: 1px solid black; 
 }
 
+#currentteam {
+	width: 100%;
+	height: 50px;
+	line-height: 10px;
+	border: 1px solid black;
+	border-bottom: 0px;
+}
+
 
 
 

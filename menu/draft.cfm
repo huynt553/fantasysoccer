@@ -8,6 +8,11 @@
 <!--- bring in style sheet --->
 <link href="/tim/tim/resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
+<script>
+function profileUpdate() {
+    document.getElementById("testname").innerHTML = "CR7";
+}
+</script>
 <body>
 <div id="header"></div>
 
@@ -38,6 +43,28 @@
 </div>
 
 <div id="wrapper">
+	<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
+	<div id="currentteam">
+		<cfoutput>
+			<cfif isDefined("url.counter")>
+				<cfquery name = "get_teams" datasource="test2">
+					SELECT *
+					FROM teamtest
+					WHERE rankorder = #counter#
+				</cfquery>
+					<h1>Current team is #get_teams.name#</h1>
+			<cfelse>
+				<cfset counter = 1>
+				<cfquery name = "get_teams" datasource="test2">
+					SELECT *
+					FROM teamtest
+					WHERE rankorder = 1
+				</cfquery>
+					<h1>Current team is #get_teams.name#</h1>
+			</cfif>
+		</cfoutput>
+	</div>
+	
 		
 	<div id="playerlist">
 		<cfoutput>
@@ -47,15 +74,13 @@
 					FROM teamtest
 					WHERE rankorder = #counter#
 				</cfquery>
-				<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
-					Current team is #get_teams.name# 
 					<cfset counter += 1>
 					<cfif #counter# GT "8">
 						<cfset counter = 1>
 					</cfif>
+					<p id="testname3" onclick="profileUpdate()"> Test Click Here </p>
 					<input type="hidden" value="#counter#" name="counter" id="count">
 					<input type="submit" value="Submit" name="send" id="send">
-				</form>
 			<cfelse>
 				<cfset counter = 1>
 				<cfquery name = "get_teams" datasource="test2">
@@ -63,26 +88,26 @@
 					FROM teamtest
 					WHERE rankorder = 1
 				</cfquery>
-				<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
-					Current team is #get_teams.name# 
 					<cfset counter += 1>
+					<p id="testname3" onclick="profileUpdate()"> Test Click Here </p>
 					<input type="hidden" value="#counter#" name="counter" id="count">
 					<input type="submit" value="Submit" name="send" id="send">
-				</form>
 			</cfif>
 		</cfoutput>
 	</div>
 	
 	<div id="playerinfo">
-		Filler
+		<p id="testname"> Filler </p>
+		<input type="submit" value="Submit" name="send" id="send">
 	</div>
 	
 	<div id="teaminfo">
-		Filler
+		<p id="testname2"> Filler </p>
+		<input type="submit" value="Submit" name="send" id="send">
 	</div>
 	
 </div>
 		
-
+</form>
 </body>
 </html>
