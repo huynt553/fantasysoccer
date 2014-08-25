@@ -98,19 +98,10 @@ a:hover {
 	color: white;
 }
 
-#c1, #c2, #c3 {
-    display:inline-block;
+#playerlist, #playerinfo, #teaminfo {
+    display: inline-block;
     width: 33%;
     height: 1000px;
-}
-
-#c1 { 
-	border: 1px solid black; 
-}
-#c2 { 
-	border: 1px solid black; 
-}
-#c3 { 
 	border: 1px solid black; 
 }
 

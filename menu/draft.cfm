@@ -38,14 +38,47 @@
 </div>
 
 <div id="wrapper">
-    
-	<div id="c1">
+		
+	<div id="playerlist">
+		<cfoutput>
+			<cfif isDefined("url.counter")>
+				<cfquery name = "get_teams" datasource="test2">
+					SELECT *
+					FROM teamtest
+					WHERE rankorder = #counter#
+				</cfquery>
+				<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
+					Current team is #get_teams.name# 
+					<cfset counter += 1>
+					<cfif #counter# GT "8">
+						<cfset counter = 1>
+					</cfif>
+					<input type="hidden" value="#counter#" name="counter" id="count">
+					<input type="submit" value="Submit" name="send" id="send">
+				</form>
+			<cfelse>
+				<cfset counter = 1>
+				<cfquery name = "get_teams" datasource="test2">
+					SELECT *
+					FROM teamtest
+					WHERE rankorder = 1
+				</cfquery>
+				<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
+					Current team is #get_teams.name# 
+					<cfset counter += 1>
+					<input type="hidden" value="#counter#" name="counter" id="count">
+					<input type="submit" value="Submit" name="send" id="send">
+				</form>
+			</cfif>
+		</cfoutput>
 	</div>
 	
-	<div id="c2">
+	<div id="playerinfo">
+		Filler
 	</div>
 	
-	<div id="c3">
+	<div id="teaminfo">
+		Filler
 	</div>
 	
 </div>
