@@ -60,9 +60,7 @@
 		</cfoutput>
 	</div>
 	
-		
-	<div id="playerlist">
-		<cfoutput>
+	<cfoutput>
 			<cfif isDefined("url.counter")>
 				<cfquery name = "get_teams" datasource="soccer">
 					SELECT *
@@ -73,9 +71,7 @@
 					<cfif #counter# GT "8">
 						<cfset counter = 1>
 					</cfif>
-					<p id="testname3" onclick="profileUpdate()"> Test Click Here </p>
 					<input type="hidden" value="#counter#" name="counter" id="count">
-					<input type="submit" value="Submit" name="send" id="send">
 			<cfelse>
 				<cfset counter = 1>
 				<cfquery name = "get_teams" datasource="soccer">
@@ -84,21 +80,27 @@
 					WHERE rankorder = 1
 				</cfquery>
 					<cfset counter += 1>
-					<p id="testname3" onclick="profileUpdate()"> Test Click Here </p>
 					<input type="hidden" value="#counter#" name="counter" id="count">
-					<input type="submit" value="Submit" name="send" id="send">
 			</cfif>
-		</cfoutput>
+	</cfoutput>	
+		
+	<div id="playerlist">
+		<p id="testname"> 
+			<!--- Player List Here --->
+		</p>
 	</div>
 	
 	<div id="playerinfo">
-		<p id="testname"> Filler </p>
-		<input type="submit" value="Submit" name="send" id="send">
+		<p id="testname"> 
+			<!--- Player Info Here ---> 
+			<input type="submit" value="Draft" name="send" id="send">
+		</p>
 	</div>
 	
 	<div id="teaminfo">
-		<p id="testname2"> Filler </p>
-		<input type="submit" value="Submit" name="send" id="send">
+		<p id="testname2"> 
+			<!--- Team Info Here --->
+		</p>
 	</div>
 	
 </div>	

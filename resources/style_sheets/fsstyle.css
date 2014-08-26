@@ -103,6 +103,7 @@ a:hover {
     width: 32%;
     height: 1000px;
 	border: 1px solid white; 
+	vertical-align:top; 
 }
 
 #currentteam {
