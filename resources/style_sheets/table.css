@@ -93,3 +93,15 @@
 .CSSTableGenerator tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+
+/* Tim's CSS from here */
+
+.CSSTableGenerator tr:nth-child(odd):hover{ 
+	cursor: pointer;
+	background-color: #F88C21; 
+}
+
+.CSSTableGenerator tr:nth-child(even):hover{ 
+	cursor: pointer;
+	background-color: #DBDBDB; 
+}

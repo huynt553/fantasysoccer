@@ -88,24 +88,34 @@ function profileUpdate() {
 					<input type="hidden" value="#counter#" name="counter" id="count">
 			</cfif>
 	</cfoutput>	
-		
+			
 	<div id="playerlist">
+	
+		<cfquery name="get_players" datasource="test2">
+			SELECT * 
+			FROM players
+			ORDER BY last_name
+		</cfquery>
+		
 		<div class="CSSTableGenerator">
-            <table>
-                    <tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Team</td>
+			<table>
+					<tr>
+						<td>Last Name</td>
+						<td>First Name</td>
+						<td>Team</td>
 						<td>Position</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1</td>
-						<td>Row 1</td>
-						<td>Row 1</td>
-						<td>Row 1</td>
-                    </tr>
-            </table>
-        </div>
+					</tr>
+					<cfoutput query="get_players">
+					<tr>
+						<td>#last_name#</td>
+						<td>#first_name#</td>
+						<td>#team#</td>
+						<td>#position#</td>
+					</tr>
+					</cfoutput>
+			</table>
+		</div>
+		
 	</div>
 	
 	<div id="playerinfo">
