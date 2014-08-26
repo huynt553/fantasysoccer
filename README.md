@@ -6,4 +6,9 @@ Fantasy Soccer (C) 2014
 
 =============
 
-When developing from elsewhere, push to the "home" branch. 
+When pushing from elsewhere
+
+1. cd Z:\tim\tim
+2. git init
+3. git commit -m "message here"
+4. git push fs master
