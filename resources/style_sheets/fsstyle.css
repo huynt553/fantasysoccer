@@ -1,12 +1,13 @@
+@import url("table.css");
+
 body {
 	background-image: url("../images/bgimage.jpg");
-    background-attachment: fixed;
+	background-attachment: fixed;
 	background-color: black;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	z-index: auto;
 	font-size: 10pt;
 	color: white;
-}
 }
 
 a:link {
@@ -102,7 +103,7 @@ a:hover {
     display: inline-block;
     width: 32%;
     height: 1000px;
-	border: 1px solid white; 
+	border: 1px solid black; 
 	vertical-align:top; 
 }
 
@@ -113,19 +114,10 @@ a:hover {
 	text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#playerpicture {
+	margin-left: 15px;
+	margin-top: 15px;
+	width: 35%;
+	height: 20%;
+	border: 1px solid black;
+}

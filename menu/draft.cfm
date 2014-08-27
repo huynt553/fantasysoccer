@@ -85,16 +85,45 @@
 	</cfoutput>	
 		
 	<div id="playerlist">
-		<p id="testname"> 
-			<!--- Player List Here --->
-		</p>
+	
+		<cfquery name="get_players" datasource="soccer">
+			SELECT * 
+			FROM players
+			ORDER BY last_name
+		</cfquery>
+		
+		<div class="CSSTableGenerator">
+			<table>
+					<tr>
+						<td>Last Name</td>
+						<td>First Name</td>
+						<td>Team</td>
+						<td>Position</td>
+					</tr>
+					<cfoutput query="get_players">
+					<tr>
+						<td>#last_name#</td>
+						<td>#first_name#</td>
+						<td>#team#</td>
+						<td>#position#</td>
+					</tr>
+					</cfoutput>
+			</table>
+		</div>
+		
 	</div>
 	
 	<div id="playerinfo">
-		<p id="testname"> 
-			<!--- Player Info Here ---> 
-			<input type="submit" value="Draft" name="send" id="send">
-		</p>
+		<div id="playerpicture">
+		</div>
+		
+		<div id="playerdetails">
+		</div>
+		
+		<div id="playerstats">
+		</div>
+		
+		<input type="submit" value="Draft" name="send" id="send">
 	</div>
 	
 	<div id="teaminfo">
