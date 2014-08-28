@@ -10,8 +10,29 @@
 </head>
 <script>
 function profileUpdate() {
-    document.getElementById("testname").innerHTML = "CR7";
+    document.getElementById("playerpicture").innerHTML = "<b>CR7</b>";
 }
+</script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(function () {
+    $('table tr').click(function () {
+        var LastName = $(this).children('td:eq(0)').html();
+        var FirstName = $(this).children('td:eq(1)').html();
+        var Team = $(this).children('td:eq(2)').html();
+        var Position = $(this).children('td:eq(3)').html();
+        
+        $('#playerpicture').html(
+            'First Name: ' + FirstName + '<br />' +
+            'Last Name: ' + LastName + '<br />' + 
+            'Team: ' + Team + '<br />' + 
+            'Position: ' + Position + '<br />'
+        );
+    });        
+});
+});//]]>  
+
 </script>
 <body>
 <div id="header"></div>
@@ -100,29 +121,34 @@ function profileUpdate() {
 		<div class="CSSTableGenerator">
 			<table>
 					<tr>
-						<td>Last Name</td>
-						<td>First Name</td>
-						<td>Team</td>
-						<td>Position</td>
+						<th>Last Name</th>
+						<th>First Name</th>
+						<th>Team</th>
+						<th>Position</th>
 					</tr>
-					<cfoutput query="get_players">
-					<tr>
-						<td>#last_name#</td>
-						<td>#first_name#</td>
-						<td>#team#</td>
-						<td>#position#</td>
-					</tr>
-					</cfoutput>
+						<cfoutput query="get_players">
+							<tr onclick="profileUpdate()">
+								<td>#last_name#</td>
+								<td>#first_name#</td>
+								<td>#team#</td>
+								<td>#position#</td>
+							</tr>
+						</cfoutput>
 			</table>
 		</div>
 		
 	</div>
 	
 	<div id="playerinfo">
-		<p id="testname"> 
-			<!--- Player Info Here ---> 
-			<input type="submit" value="Draft" name="send" id="send">
-		</p>
+		<div id="playerpicture">
+		</div>
+		
+		<div id="playerdetails">
+		</div>
+		
+		<div id="playerstats">
+		</div>
+		<input type="submit" value="Draft" name="send" id="send">
 	</div>
 	
 	<div id="teaminfo">

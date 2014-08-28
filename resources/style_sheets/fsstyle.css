@@ -116,6 +116,12 @@ a:hover {
 	border-bottom: 0px;
 }
 
+#playerpicture {
+	width: 48%;
+	height: 40%;
+	border: 1px solid black;
+}
+
 
 
 
