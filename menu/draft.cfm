@@ -152,6 +152,7 @@ $(function () {
 		</div>
 		
 		<div id="playerstats">
+			2013/2014 Player Statistics
 		</div>
 		<input type="submit" value="Draft" name="send" id="send">
 	</div>

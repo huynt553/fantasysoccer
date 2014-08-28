@@ -124,6 +124,14 @@ a:hover {
 	vertical-align:top;
 }
 
+#playerstats {
+	margin-left: 25px;
+	margin-top: 90px;
+	width: 90%;
+	height: 40%;
+	border: 1px solid black;
+}
+
 
 
 
