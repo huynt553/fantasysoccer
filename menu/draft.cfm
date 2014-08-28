@@ -22,13 +22,18 @@ $(function () {
         var FirstName = $(this).children('td:eq(1)').html();
         var Team = $(this).children('td:eq(2)').html();
         var Position = $(this).children('td:eq(3)').html();
-        
-        $('#playerpicture').html(
+		
+		$('#playerpicture').html(
+			"<img src='/tim/tim/resources/images/genericphoto.png' />"
+        );
+		
+		$('#playerdetails').html(
             'First Name: ' + FirstName + '<br />' +
             'Last Name: ' + LastName + '<br />' + 
             'Team: ' + Team + '<br />' + 
             'Position: ' + Position + '<br />'
         );
+		
     });        
 });
 });//]]>  

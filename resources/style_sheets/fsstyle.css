@@ -116,10 +116,12 @@ a:hover {
 	border-bottom: 0px;
 }
 
-#playerpicture {
+#playerpicture, #playerdetails {
+	display: inline-block;
 	width: 48%;
 	height: 40%;
 	border: 1px solid black;
+	vertical-align:top;
 }
 
 
