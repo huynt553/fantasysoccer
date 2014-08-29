@@ -23,6 +23,22 @@ $(function () {
         var Team = $(this).children('td:eq(2)').html();
         var Position = $(this).children('td:eq(3)').html();
 		
+		/*$.ajax({
+			type: "GET",
+			dataType: "json",
+			url: "../resources/components/players.cfc?method=Test",
+			contentType: "application/json; charset=utf-8",
+			data: {
+				method: "getUserById",
+			},
+			success: function (data) {
+				$("#frmMain").formHash(data);
+			},
+			error: function (xhr, textStatus, erroThrown {
+				alert(errorThrown);
+			}
+		});*/
+		
 		$('#playerpicture').html(
 			"<img src='../resources/images/genericphoto.png' width='100%' height='100%'/>"
         );
