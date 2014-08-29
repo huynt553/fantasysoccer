@@ -115,9 +115,19 @@ a:hover {
 }
 
 #playerpicture {
-	margin-left: 15px;
-	margin-top: 15px;
-	width: 35%;
-	height: 20%;
-	border: 1px solid black;
+	margin-top: 20%;
+	margin-left: 20%;
+	display: inline-block;
+	width: 60%;
+	height: 30%;
+	border: 1px solid white;
+	vertical-align:top;
+}
+
+#playerstats {
+	margin-left: 25px;
+	margin-top: 90px;
+	width: 90%;
+	height: 40%;
+	border: 1px solid white;
 }

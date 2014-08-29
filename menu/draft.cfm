@@ -8,6 +8,37 @@
 <!--- bring in style sheet --->
 <link href="../resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
+<script>
+function profileUpdate() {
+    document.getElementById("playerpicture").innerHTML = "<b>CR7</b>";
+}
+</script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(function () {
+    $('table tr').click(function () {
+        var LastName = $(this).children('td:eq(0)').html();
+        var FirstName = $(this).children('td:eq(1)').html();
+        var Team = $(this).children('td:eq(2)').html();
+        var Position = $(this).children('td:eq(3)').html();
+		
+		$('#playerpicture').html(
+			"<img src='../resources/images/genericphoto.png' width='100%' height='100%'/>"
+        );
+		
+		$('#playerstats').html(
+            'First Name: ' + FirstName + '<br />' +
+            'Last Name: ' + LastName + '<br />' + 
+            'Team: ' + Team + '<br />' + 
+            'Position: ' + Position + '<br />'
+        );
+		
+    });        
+});
+});//]]>  
+
+</script>
 <body>
 <div id="header"></div>
 
@@ -95,19 +126,19 @@
 		<div class="CSSTableGenerator">
 			<table>
 					<tr>
-						<td>Last Name</td>
-						<td>First Name</td>
-						<td>Team</td>
-						<td>Position</td>
+						<th>Last Name</th>
+						<th>First Name</th>
+						<th>Team</th>
+						<th>Position</th>
 					</tr>
-					<cfoutput query="get_players">
-					<tr>
-						<td>#last_name#</td>
-						<td>#first_name#</td>
-						<td>#team#</td>
-						<td>#position#</td>
-					</tr>
-					</cfoutput>
+						<cfoutput query="get_players">
+							<tr onclick="profileUpdate()">
+								<td>#last_name#</td>
+								<td>#first_name#</td>
+								<td>#team#</td>
+								<td>#position#</td>
+							</tr>
+						</cfoutput>
 			</table>
 		</div>
 		
@@ -117,12 +148,9 @@
 		<div id="playerpicture">
 		</div>
 		
-		<div id="playerdetails">
-		</div>
-		
 		<div id="playerstats">
+			2013/2014 Player Statistics
 		</div>
-		
 		<input type="submit" value="Draft" name="send" id="send">
 	</div>
 	
