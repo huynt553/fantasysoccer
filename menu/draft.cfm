@@ -8,19 +8,8 @@
 <!--- bring in style sheet --->
 <link href="../resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
-<script>
-function profileUpdate() {
-    document.getElementById("playerpicture").innerHTML = "<b>CR7</b>";
-}
-</script>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 <script type='text/javascript'>//<![CDATA[ 
-function draft() {
-	alert("Current team is Team1");
-}
-function draft2() {
-	alert("Current team is not Team1");
-}
 $(window).load(function(){
 $(function () {
     $('table tr').click(function () {
@@ -46,6 +35,8 @@ $(function () {
 		$('img').error(function(){
 				$(this).attr('src', '../resources/images/genericphoto.png');
 		});
+		
+		$('input[name="LastName"]').val(LastName);
 		
 		/*$('#playerstats').html(
             'First Name: ' + FirstName + '<br />' +
@@ -153,7 +144,7 @@ $(function () {
 						<th>Position</th>
 					</tr>
 						<cfoutput query="get_players">
-							<tr onclick="profileUpdate()">
+							<tr>
 								<td>#last_name#</td>
 								<td>#first_name#</td>
 								<td>#team#</td>
@@ -171,14 +162,7 @@ $(function () {
 		
 		<div id="playerstats">
 		</div>
-		<input type="submit" value="Draft" name="send" id="send" 
-		<cfoutput>
-			<cfif #get_teams.name# EQ "Team1">
-				onclick="draft()">
-			<cfelse>
-				onclick="draft2()">
-			</cfif>
-		</cfoutput>
+		<input type="submit" value="Draft" name="send" id="send" >
 	</div>
 	
 	<div id="teaminfo">
@@ -190,6 +174,7 @@ $(function () {
 </div>	
 	<cfoutput>
 		<input type="hidden" name="TeamName" value="#get_teams.name#">
+		<input type="hidden" name="LastName">
 	</cfoutput>
 </form>
 		
