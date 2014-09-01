@@ -12,6 +12,12 @@
 function profileUpdate() {
     document.getElementById("playerpicture").innerHTML = "<b>CR7</b>";
 }
+function draft() {
+	alert("Current team is Team1");
+}
+function draft2() {
+	alert("Current team is not Team1");
+}
 </script>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 <script type='text/javascript'>//<![CDATA[ 
@@ -165,7 +171,14 @@ $(function () {
 		
 		<div id="playerstats">
 		</div>
-		<input type="submit" value="Draft" name="send" id="send">
+		<input type="submit" value="Draft" name="send" id="send" 
+		<cfoutput>
+			<cfif #get_teams.name# EQ "Team1">
+				onclick="draft()">
+			<cfelse>
+				onclick="draft2()">
+			</cfif>
+		</cfoutput>
 	</div>
 	
 	<div id="teaminfo">
