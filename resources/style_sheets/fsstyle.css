@@ -131,3 +131,8 @@ a:hover {
 	height: 40%;
 	border: 1px solid white;
 }
+
+#send {
+	margin: 25px;
+	margin-left: 45%;
+}
