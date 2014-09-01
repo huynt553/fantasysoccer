@@ -12,15 +12,15 @@
 function profileUpdate() {
     document.getElementById("playerpicture").innerHTML = "<b>CR7</b>";
 }
+</script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+<script type='text/javascript'>//<![CDATA[ 
 function draft() {
 	alert("Current team is Team1");
 }
 function draft2() {
 	alert("Current team is not Team1");
 }
-</script>
-<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
-<script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $(function () {
     $('table tr').click(function () {
@@ -89,7 +89,7 @@ $(function () {
 </div>
 
 <div id="wrapper">
-	<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
+	<form id="draftform" name="myform" onsubmit="" action="../resources/components/InsertLeagueTeam.cfm">
 	<input type="hidden" name="lastname">
 	<div id="currentteam">
 		<cfoutput>
@@ -188,6 +188,9 @@ $(function () {
 	</div>
 	
 </div>	
+	<cfoutput>
+		<input type="hidden" name="TeamName" value="#get_teams.name#">
+	</cfoutput>
 </form>
 		
 
