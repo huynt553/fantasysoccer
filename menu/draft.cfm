@@ -23,32 +23,30 @@ $(function () {
         var Team = $(this).children('td:eq(2)').html();
         var Position = $(this).children('td:eq(3)').html();
 		
-		/*$.ajax({
-			type: "GET",
-			dataType: "json",
-			url: "../resources/components/players.cfc?method=Test",
-			contentType: "application/json; charset=utf-8",
-			data: {
-				method: "getUserById",
-			},
-			success: function (data) {
-				$("#frmMain").formHash(data);
-			},
-			error: function (xhr, textStatus, erroThrown {
-				alert(errorThrown);
-			}
-		});*/
+		$.ajax({
+		  type: "GET",
+		  url: "../resources/components/players.cfm?lastname="+LastName,
+		  cache: false,
+		  success: function(data){
+			$("#playerstats").html(data);
+		  },
+		});
 		
 		$('#playerpicture').html(
-			"<img src='../resources/images/genericphoto.png' width='100%' height='100%'/>"
-        );
+				"<img src='../resources/images/playerpics/"+LastName+".png' width='100%' height='100%'/>"
+		);
 		
-		$('#playerstats').html(
+		// Replace source
+		$('img').error(function(){
+				$(this).attr('src', '../resources/images/genericphoto.png');
+		});
+		
+		/*$('#playerstats').html(
             'First Name: ' + FirstName + '<br />' +
             'Last Name: ' + LastName + '<br />' + 
             'Team: ' + Team + '<br />' + 
             'Position: ' + Position + '<br />'
-        );
+        );*/
 		
     });        
 });
@@ -86,6 +84,7 @@ $(function () {
 
 <div id="wrapper">
 	<form id="draftform" name="myform" onsubmit="" action="draft.cfm">
+	<input type="hidden" name="lastname">
 	<div id="currentteam">
 		<cfoutput>
 			<cfif isDefined("url.counter")>
@@ -165,7 +164,6 @@ $(function () {
 		</div>
 		
 		<div id="playerstats">
-			2013/2014 Player Statistics
 		</div>
 		<input type="submit" value="Draft" name="send" id="send">
 	</div>
