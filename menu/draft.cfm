@@ -9,7 +9,7 @@
 <link href="../resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
-<script type='text/javascript'>//<![CDATA[ 
+<script type='text/javascript'>//<![CDATA[
 $(window).load(function(){
 $('select.changeStatus').change(function(){
 
@@ -166,7 +166,8 @@ $(function () {
 				SELECT * 
 				FROM teams
 			</cfquery>
-			<select class="changeStatus" name="changeStatus">
+			<select class="changeStatus" name="changeStatus" id="selectBox">
+					<option selected="selected" disabled="disabled">Select a team</option>
 			<cfoutput query="get_list_teams">
 					<option value="#name#">#name#</option>
 			</cfoutput>
