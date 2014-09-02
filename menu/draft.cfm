@@ -14,9 +14,11 @@ $(window).load(function(){
 $('select.changeStatus').change(function(){
 
     // You can access the value of your select field using the .val() method
-	var str = $('#currentteam').html();
+	/*var str = $('#currentteam').html();
 	var res = str.replace("<h1>Current team is", "");
-	var team = res.replace("</h1>", "");
+	var team = res.replace("</h1>", "");*/
+	
+	var team = $('select.changeStatus').val();
 	
 	$.ajax({
 		type: "GET",
@@ -184,12 +186,12 @@ $(function () {
 	
 	<div id="teaminfo">
 		<div id="teamselect">
-			<cfquery name="get_teams" datasource="soccer">
+			<cfquery name="get_list_teams" datasource="soccer">
 				SELECT * 
 				FROM teams
 			</cfquery>
 			<select class="changeStatus" name="changeStatus">
-			<cfoutput query="get_teams">
+			<cfoutput query="get_list_teams">
 					<option value="#name#">#name#</option>
 			</cfoutput>
 			</select>
