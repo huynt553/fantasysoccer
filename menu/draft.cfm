@@ -11,6 +11,23 @@
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
+$('select.changeStatus').change(function(){
+
+    // You can access the value of your select field using the .val() method
+	var str = $('#currentteam').html();
+	var res = str.replace("<h1>Current team is", "");
+	var team = res.replace("</h1>", "");
+	
+	$.ajax({
+		type: "GET",
+		url: "../resources/components/DisplayTeams.cfm?Team="+team,
+		cache: false,
+		success: function(data){
+		$("#teamdisplay").html(data);
+		},
+	});
+
+});
 $(function () {
     $('table tr').click(function () {
         var LastName = $(this).children('td:eq(0)').html();
@@ -166,9 +183,20 @@ $(function () {
 	</div>
 	
 	<div id="teaminfo">
-		<p id="testname2"> 
-			<!--- Team Info Here --->
-		</p>
+		<div id="teamselect">
+			<cfquery name="get_teams" datasource="soccer">
+				SELECT * 
+				FROM teams
+			</cfquery>
+			<select class="changeStatus" name="changeStatus">
+			<cfoutput query="get_teams">
+					<option value="#name#">#name#</option>
+			</cfoutput>
+			</select>
+		</div>
+		
+		<div id="teamdisplay">
+		</div>
 	</div>
 	
 </div>	

@@ -136,3 +136,11 @@ a:hover {
 	margin: 25px;
 	margin-left: 45%;
 }
+
+#teamselect {
+	margin-top: 10%;
+	margin-left: 12%;
+	width: 75%;
+	height: 5%;
+	border: 1px solid white;
+}
