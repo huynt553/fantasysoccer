@@ -115,13 +115,22 @@ a:hover {
 }
 
 #playerpicture {
-	margin-top: 20%;
-	margin-left: 20%;
+	margin-top: 5%;
+	margin-left: 5%;
 	display: inline-block;
 	width: 128px;
 	height: 128px;
 	border: 1px solid white;
-	vertical-align:top;
+	vertical-align: top;
+}
+
+#playerdetails {
+	margin-top: 5%;
+	margin-left: 10px;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	vertical-align: top;
 }
 
 #playerstats {
@@ -163,4 +172,8 @@ select {
     -moz-appearance:none;
     appearance:none;
     cursor:pointer;
+}
+
+#teamdisplay {
+	margin-left: 20%;
 }

@@ -42,7 +42,7 @@ $(function () {
 		  url: "../resources/components/players.cfm?lastname="+LastName,
 		  cache: false,
 		  success: function(data){
-			$("#playerstats").html(data);
+			$("#playerdetails").html(data);
 		  },
 		});
 		
@@ -153,6 +153,9 @@ $(function () {
 	
 	<div id="playerinfo">
 		<div id="playerpicture">
+		</div>
+		
+		<div id="playerdetails">
 		</div>
 		
 		<div id="playerstats">

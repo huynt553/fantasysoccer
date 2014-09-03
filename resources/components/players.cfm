@@ -3,12 +3,11 @@
 	FROM players
 	WHERE last_name =  '#lastname#'
 </cfquery>
-<h1>Players</h1>
+<cfoutput query="get_players">
+	<h2><cfif #first_name# NEQ "N/A">#first_name#</cfif> #last_name#</h2>
+</cfoutput>
 
 <cfoutput query="get_players">
-<cfif #first_name# NEQ "N/A">
-<b>#first_name# </b>
-</cfif>
-<b>#last_name# </b> - #team# - #number# - #position#
+#team# - ###number# - #position#
 </cfoutput>
 
