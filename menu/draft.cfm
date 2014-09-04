@@ -168,8 +168,30 @@ $(function () {
 		</div>
 		
 		<div id="playerstats">
+			<h1>2013-2014 Statistics</h1>
+			<table border="1px">
+				<tbody>
+					<tr>
+						<th>Goals</th>
+						<th>Assists</th>
+						<th>Yellow Cards</th>
+						<th>Red Cards</th>
+						<th>Shots Per Game</th>
+						<th>Pass Percentage</th>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<input type="submit" value="Draft" name="send" id="send" >
+		
+		<input type="image" src="../resources/images/draft.png" value="Draft" name="send" id="send" >
 	</div>
 	
 	<div id="teaminfo">

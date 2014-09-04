@@ -137,13 +137,12 @@ a:hover {
 	margin-left: 25px;
 	margin-top: 90px;
 	width: 90%;
-	height: 40%;
-	border: 1px solid white;
+	height: auto;
 }
 
 #send {
 	margin: 25px;
-	margin-left: 45%;
+	margin-left: 38%;
 }
 
 #teamselect {
