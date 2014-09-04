@@ -15,8 +15,10 @@ Pushing from Home
 4. git push origin home
 
 =============
-- [ ] a task list item
-- [ ] list syntax required
-- [ ] normal **formatting**, @mentions, #1234 refs
-- [ ] incomplete
-- [x] completed
+- [ ] fancy scrollbar
+- [ ] "My Team" show roster (with field or grid/table?)
+- [ ] lightbox fade in message when draft button is clicked
+- [ ] Add more players and stats
+- [ ] Order draft board by rankings?
+- [ ] Search feature for draft board
+- [ ] Include team crest in player info
