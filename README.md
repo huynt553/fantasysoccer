@@ -13,3 +13,10 @@ Pushing from Home
 2. git add . 
 3. git commit -m "message here"
 4. git push origin home
+
+=============
+- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
