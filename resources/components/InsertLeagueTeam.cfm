@@ -7,11 +7,10 @@
 	<cfquery name="CreateTable" datasource="soccer">
 		CREATE TABLE <cfoutput>#TeamName#</cfoutput>
 		(
-			PersonID int,
+			player_id int,
 			LastName varchar(255),
 			FirstName varchar(255),
-			Team varchar(255),
-			City varchar(255)
+			Team varchar(255)
 		); 
 	</cfquery>
 	
@@ -30,9 +29,16 @@
 		WHERE last_name = "#NewLastName#"
 	</cfquery>
 	<cfquery name="InsertPlayer" datasource="soccer">
-		INSERT INTO #TeamName# (LastName, FirstName, Team)
-		VALUES ('#GetPlayer.last_name#', '#GetPlayer.first_name#', '#GetPlayer.team#')
+		INSERT INTO #TeamName# (player_id, LastName, FirstName, Team)
+		VALUES ('#GetPlayer.player_id#', '#GetPlayer.last_name#', '#GetPlayer.first_name#', '#GetPlayer.team#')
 	</cfquery>
+	
+	<cfquery name="UpdateDraftStatus" datasource="soccer">
+		UPDATE players
+		SET drafted = 'Y'
+		WHERE last_name = "#NewLastName#"
+	</cfquery>
+	
 </cfoutput>
 
 Updating Database...
