@@ -46,6 +46,15 @@ $(function () {
 		  },
 		});
 		
+		$.ajax({
+		  type: "GET",
+		  url: "../resources/components/GetPlayerStats_2013.cfm?lastname="+LastName,
+		  cache: false,
+		  success: function(data){
+			$("#playerstats").html(data);
+		  },
+		});
+		
 		$('#playerpicture').html(
 				"<img src='../resources/images/playerpics/"+LastName+".png' width='100%' height='100%'/>"
 		);
