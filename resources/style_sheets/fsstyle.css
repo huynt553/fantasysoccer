@@ -176,3 +176,21 @@ select {
 #teamdisplay {
 	margin-left: 20%;
 }
+
+#standings {
+	line-height: 40px;
+	width: 30%;
+	text-align: center;
+}
+
+#formsheet {
+	margin: 35px;
+	padding: 30px;
+	width: 150px;
+	clear: both;
+}
+
+#formsheet input {
+	width: 100%;
+	clear: both;
+}

@@ -12,6 +12,30 @@
 <div id="header"></div>
 
 <cfinclude template="navigation.cfm">
+
+<cfquery name="get_league_teams" datasource="soccer">
+	SELECT *
+	FROM teams
+</cfquery>
+
+<table id="standings" border="1px">
+	<tr>
+		<th>Team</th>
+		<th>Wins</th>
+		<th>Losses</th>
+		<th>Ties</th>
+		<th>Percentage</th>
+	</tr>
+<cfoutput query="get_league_teams">
+	<tr>
+		<td>#name#</td>
+		<td>#wins#</td>
+		<td>#losses#</td>
+		<td>#ties#</td>
+		<td>#percentage#</td>
+	</tr>
+</cfoutput>
+</table>
 		
 
 </body>

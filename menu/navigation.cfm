@@ -22,4 +22,10 @@
 	<cfelse>
 		<div><a href="players.cfm">Players</a></div>
 	</cfif>
+	
+	<cfif #find("draft",CGI.PATH_TRANSLATED)# IS NOT 0>
+		<div class="activelink"><a href="draft.cfm">Draft</a></div>
+	<cfelse>
+		<div><a href="draft.cfm">Draft</a></div>
+	</cfif>
 </div>
