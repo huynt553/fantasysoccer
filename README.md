@@ -21,5 +21,5 @@ Pushing from Home
 - [ ] Add more players and stats
 - [ ] Order draft board by rankings?
 - [ ] Search feature for draft board
-- [ ] Include team crest in player info
+- [x] Include team crest in player info
 - [ ] Change backend to use player_id as primary key not last_name

@@ -192,7 +192,7 @@ $(function () {
 			</table>
 		</div>
 		
-		<input type="image" src="../resources/images/draft.png" value="Draft" name="send" id="send" >
+		<input type="image" src="../resources/images/draft2.png" onmouseover="this.src='../resources/images/draft.png'" onmouseout="this.src='../resources/images/draft2.png'" value="Draft" name="send" id="send" >
 	</div>
 	
 	<div id="teaminfo">
