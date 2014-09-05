@@ -136,7 +136,7 @@ $(function () {
 		<cfquery name="get_players" datasource="soccer">
 			SELECT * 
 			FROM players
-			WHERE drafted = 'n'
+			WHERE drafted = 'N'
 			ORDER BY last_name
 		</cfquery>
 		
