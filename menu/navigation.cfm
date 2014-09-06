@@ -28,4 +28,10 @@
 	<cfelse>
 		<div><a href="draft.cfm">Draft</a></div>
 	</cfif>
+	
+	<cfif #find("create",CGI.PATH_TRANSLATED)# IS NOT 0>
+		<div class="activelink"><a href="create_team.cfm">Create Team</a></div>
+	<cfelse>
+		<div><a href="create_team.cfm">Create Team</a></div>
+	</cfif>
 </div>

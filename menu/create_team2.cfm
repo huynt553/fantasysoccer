@@ -15,9 +15,20 @@
 		VALUES ('#username#', '#password#')
 </cfquery>
 
-<!--- <cfquery name="insert_team" datasource="soccer">
-	
-</cfquery>--->
+<cfquery name="get_last_user" datasource="soccer">
+	SELECT user_id 
+	FROM users 
+	ORDER BY user_id DESC LIMIT 1;
+</cfquery>
+
+<cfoutput>
+	<cfquery name="insert_team" datasource="soccer">
+			INSERT INTO teams (user_id, name)
+			VALUES ('#get_last_user.user_id#', '#TeamName#')
+	</cfquery>
+</cfoutput>
+
+<cflocation url = "league.cfm">
 
 </body>
 </html>

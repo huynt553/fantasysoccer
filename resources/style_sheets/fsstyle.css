@@ -101,9 +101,10 @@ a:hover {
 
 #playerlist, #playerinfo, #teaminfo {
     display: inline-block;
-    width: 32%;
+    /* width: 32%; */
+	width: auto;
     height: 1000px;
-	border: 1px solid black; 
+	/* border: 1px solid black; */
 	vertical-align:top; 
 }
 
