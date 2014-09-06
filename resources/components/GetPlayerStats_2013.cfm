@@ -25,5 +25,15 @@
 			<th>#PassPercent#</th>
 		</tr>
 	</cfoutput>
+	<cfif #get_stats.RecordCount# EQ 0>
+		<tr>
+			<th>0</th>
+			<th>0</th>
+			<th>0</th>
+			<th>0</th>
+			<th>0</th>
+			<th>0</th>
+		</tr>
+	</cfif>
 </table>
 
