@@ -83,6 +83,11 @@ $(function () {
 
 <cfinclude template="navigation.cfm">
 
+<cfquery name="number_of_teams" datasource="soccer">
+	SELECT COUNT(*) as "TeamCount"
+	FROM teams
+</cfquery>
+
 <div id="wrapper">
 	<form id="draftform" name="myform" onsubmit="" action="../resources/components/InsertLeagueTeam.cfm">
 	<input type="hidden" name="lastname">
@@ -115,7 +120,7 @@ $(function () {
 					WHERE rankorder = #counter#
 				</cfquery>
 					<cfset counter += 1>
-					<cfif #counter# GT "8">
+					<cfif #counter# GT "#number_of_teams.TeamCount#">
 						<cfset counter = 1>
 					</cfif>
 					<input type="hidden" value="#counter#" name="counter" id="count">

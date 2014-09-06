@@ -5,7 +5,7 @@
 <!--- This will create the tables on the database --->
 <cftry>
 	<cfquery name="CreateTable" datasource="soccer">
-		CREATE TABLE <cfoutput>#TeamName#</cfoutput>
+		CREATE TABLE <cfoutput>`#TeamName#`</cfoutput>
 		(
 			player_id int,
 			LastName varchar(255),
@@ -29,7 +29,7 @@
 		WHERE last_name = "#NewLastName#"
 	</cfquery>
 	<cfquery name="InsertPlayer" datasource="soccer">
-		INSERT INTO #TeamName# (player_id, LastName, FirstName, Team)
+		INSERT INTO `#TeamName#` (player_id, LastName, FirstName, Team)
 		VALUES ('#GetPlayer.player_id#', '#GetPlayer.last_name#', '#GetPlayer.first_name#', '#GetPlayer.team#')
 	</cfquery>
 	
