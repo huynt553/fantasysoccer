@@ -63,10 +63,16 @@ function goBack() {
 	
 <div class="parent">
 <img src="../resources/images/field.jpg" />
-	<div class="goalkeeper">
-		<img src="../resources/images/playerpics/neuer.png" width="100px" height="100px" />
-		<figcaption style="text-align: center;">Neuer</figcaption>
-	</div>
+	<cfoutput query="get_team_players">
+		
+		<cfif #position# EQ "Goalkeeper">
+		<div class="goalkeeper">
+			<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+			<figcaption id="caption">#last_name#</figcaption>
+		</div>
+		</cfif>
+		
+	</cfoutput>
 </div>
 	
 	
