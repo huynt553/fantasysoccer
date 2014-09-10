@@ -14,18 +14,44 @@
     right: 41%;
 }
 
-.defender1 {
+.defender1, .defender2, .defender3, .defender4 {
 	position:absolute;
     z-index:1;
     bottom: 26%;
-    right: 20%;
+}
+
+.defender1 {
+    right: 10%;
 }
 
 .defender2 {
+    right: 30%;
+}
+
+.defender3 {
+    right: 50%;
+}
+
+.defender4 {
+    right: 70%;
+}
+
+.midfielder1, .midfielder2, .midfielder3 {
 	position:absolute;
     z-index:1;
-    bottom: 26%;
-    right: 60%;
+    bottom: 46%;
+}
+
+.midfielder1 {
+	right: 15%;
+}
+
+.midfielder2 {
+	right: 35%;
+}
+
+.midfielder3 {
+	right: 55%;
 }
 
 #caption {

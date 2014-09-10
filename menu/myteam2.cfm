@@ -91,53 +91,74 @@ function goBack() {
 		</div>
 	</cfoutput>
 	
-	<cfset def_counter = 0>
-	<cfoutput query="get_defenders" group="last_name">
-		<cfif def_counter EQ 0>
-			<div class="defender1">
-				<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
-				<figcaption id="caption">#last_name#</figcaption>
-			</div>
-			<cfset def_counter += 1>
-		</cfif>
-		
-		<cfif def_counter EQ 1>
-			<div class="defender2">
-				<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
-				<figcaption id="caption">#last_name#</figcaption>
-			</div>
-			<cfset def_counter += 1>
-		</cfif>
-	</cfoutput>
+	<cfset def_count = 0>
+	<cfloop query="get_defenders">
+		<cfoutput>
+		<cfswitch expression=#def_count#>
+			<cfcase value = 0>
+				<div class="defender1">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset def_count += 1>
+			</cfcase>
+			<cfcase value = 1>
+				<div class="defender2">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset def_count += 1>
+			</cfcase>
+			<cfcase value = 2>
+				<div class="defender3">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset def_count += 1>
+			</cfcase>
+			<cfcase value = 3>
+				<div class="defender4">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset def_count += 1>
+			</cfcase>
+		</cfswitch>
+		</cfoutput>
+	</cfloop>
+	
+	<cfset mid_count = 0>
+	<cfloop query="get_midfielders">
+		<cfoutput>
+		<cfswitch expression=#mid_count#>
+			<cfcase value = 0>
+				<div class="midfielder1">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset mid_count += 1>
+			</cfcase>
+			<cfcase value = 1>
+				<div class="midfielder2">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset mid_count += 1>
+			</cfcase>
+			<cfcase value = 2>
+				<div class="midfielder3">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset mid_count += 1>
+			</cfcase>
+		</cfswitch>
+		</cfoutput>
+	</cfloop>
 </div>
 	
 	
 </cfif>
-
-
-<cfset test_count = 0>
-<cfloop query="get_defenders">
-	<cfoutput>
-	<cfswitch expression=#test_count#>
-		<cfcase value = 0>
-			<div id="def1">#last_name#</div>
-			<cfset test_count += 1>
-		</cfcase>
-		<cfcase value = 1>
-			<div id="def2">#last_name#</div>
-			<cfset test_count += 1>
-		</cfcase>
-		<cfcase value = 2>
-			<div id="def3">#last_name#</div>
-			<cfset test_count += 1>
-		</cfcase>
-		<cfcase value = 3>
-			<div id="def4">#last_name#</div>
-			<cfset test_count += 1>
-		</cfcase>
-	</cfswitch>
-	</cfoutput>
-</cfloop>
 
 </body>
 </html>
