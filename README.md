@@ -16,7 +16,8 @@ Pushing from Home
 
 =============
 - [ ] fancy scrollbar
-- [ ] "My Team" show roster (with field or grid/table?)
+- [x] "My Team" show roster with field
+- [ ] "My Team" show roster with grid
 - [ ] lightbox fade in message when draft button is clicked
 - [ ] Add more players and stats
 - [ ] Order draft board by rankings?
