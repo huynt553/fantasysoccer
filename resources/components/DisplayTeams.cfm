@@ -1,8 +1,8 @@
 <cfquery name="get_players" datasource="soccer">
 	SELECT *
-	FROM #Team#
+	FROM `#Team#`
 	JOIN players
-	ON #Team#.LastName = players.last_name
+	ON `#Team#`.LastName = players.last_name
 	ORDER BY FIELD (position, 'Goalkeeper', 'Defender', 'Midfielder', 'Forward')
 </cfquery>
 <cfoutput><h1>#Team#</h1></cfoutput>
