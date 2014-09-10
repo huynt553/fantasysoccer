@@ -7,6 +7,7 @@
 <!--- <cfsetting showDebugOutput="No"> --->
 <!--- bring in style sheet --->
 <link href="../resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
+<link href="../resources/style_sheets/field.css" type=text/css rel=stylesheet>
 <script>
 function goBack() {
     window.history.back()
@@ -48,7 +49,7 @@ function goBack() {
 		</cfquery>
 	</cfoutput>
 	
-	<cfoutput query="get_team_players">
+	<!--- <cfoutput query="get_team_players">
 		<cfif get_team_players.position EQ "Goalkeeper">
 		Goalkeeper: #last_name#<cfif #first_name# NEQ "N/A">, #first_name# </cfif><br>
 		<cfelseif get_team_players.position EQ "Defender">
@@ -58,7 +59,16 @@ function goBack() {
 		<cfelseif get_team_players.position EQ "Forward">
 		Forward: #last_name#<cfif #first_name# NEQ "N/A">, #first_name# </cfif> <br>
 		</cfif>
-	</cfoutput>
+	</cfoutput> --->
+	
+<div class="parent">
+<img src="../resources/images/field.jpg" />
+	<div class="goalkeeper">
+		<img src="../resources/images/playerpics/neuer.png" width="100px" height="100px" />
+		<figcaption style="text-align: center;">Neuer</figcaption>
+	</div>
+</div>
+	
 	
 </cfif>
 

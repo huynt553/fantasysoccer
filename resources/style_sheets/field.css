@@ -1,0 +1,16 @@
+/* CSS File for "My Team" Page - Showing players on the field */
+
+.parent{
+    width:auto;
+    height:auto;
+    position:absolute;
+    z-index:0;
+}
+
+.goalkeeper{
+    position:absolute;
+    z-index:1;
+    bottom: 8%;
+    right: 41%;
+}
+
