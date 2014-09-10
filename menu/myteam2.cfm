@@ -41,11 +41,32 @@ function goBack() {
 	</cfoutput>
 	
 	<cfoutput>
-		<cfquery name="get_team_players" datasource="soccer">
+		<cfquery name="get_goalkeeper" datasource="soccer">
 			SELECT first_name, last_name, number, t1.team, position
 			FROM `#get_team_name.name#` t1
 			JOIN players p ON p.last_name = t1.LastName
-			ORDER BY FIELD (position, 'Goalkeeper', 'Defender', 'Midfielder', 'Forward')
+			WHERE position = 'Goalkeeper'
+		</cfquery>
+		
+		<cfquery name="get_defenders" datasource="soccer">
+			SELECT first_name, last_name, number, t1.team, position
+			FROM `#get_team_name.name#` t1
+			JOIN players p ON p.last_name = t1.LastName
+			WHERE position = 'Defender'
+		</cfquery>
+		
+		<cfquery name="get_midfielders" datasource="soccer">
+			SELECT first_name, last_name, number, t1.team, position
+			FROM `#get_team_name.name#` t1
+			JOIN players p ON p.last_name = t1.LastName
+			WHERE position = 'Midfielder'
+		</cfquery>
+		
+		<cfquery name="get_forwards" datasource="soccer">
+			SELECT first_name, last_name, number, t1.team, position
+			FROM `#get_team_name.name#` t1
+			JOIN players p ON p.last_name = t1.LastName
+			WHERE position = 'Forward'
 		</cfquery>
 	</cfoutput>
 	
@@ -63,20 +84,60 @@ function goBack() {
 	
 <div class="parent">
 <img src="../resources/images/field.jpg" />
-	<cfoutput query="get_team_players">
-		
-		<cfif #position# EQ "Goalkeeper">
+	<cfoutput query="get_goalkeeper">
 		<div class="goalkeeper">
 			<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
 			<figcaption id="caption">#last_name#</figcaption>
 		</div>
+	</cfoutput>
+	
+	<cfset def_counter = 0>
+	<cfoutput query="get_defenders" group="last_name">
+		<cfif def_counter EQ 0>
+			<div class="defender1">
+				<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+				<figcaption id="caption">#last_name#</figcaption>
+			</div>
+			<cfset def_counter += 1>
 		</cfif>
 		
+		<cfif def_counter EQ 1>
+			<div class="defender2">
+				<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+				<figcaption id="caption">#last_name#</figcaption>
+			</div>
+			<cfset def_counter += 1>
+		</cfif>
 	</cfoutput>
 </div>
 	
 	
 </cfif>
+
+
+<cfset test_count = 0>
+<cfloop query="get_defenders">
+	<cfoutput>
+	<cfswitch expression=#test_count#>
+		<cfcase value = 0>
+			<div id="def1">#last_name#</div>
+			<cfset test_count += 1>
+		</cfcase>
+		<cfcase value = 1>
+			<div id="def2">#last_name#</div>
+			<cfset test_count += 1>
+		</cfcase>
+		<cfcase value = 2>
+			<div id="def3">#last_name#</div>
+			<cfset test_count += 1>
+		</cfcase>
+		<cfcase value = 3>
+			<div id="def4">#last_name#</div>
+			<cfset test_count += 1>
+		</cfcase>
+	</cfswitch>
+	</cfoutput>
+</cfloop>
 
 </body>
 </html>
