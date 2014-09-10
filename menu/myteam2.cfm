@@ -155,6 +155,35 @@ function goBack() {
 		</cfswitch>
 		</cfoutput>
 	</cfloop>
+	
+	<cfset forward_count = 0>
+	<cfloop query="get_forwards">
+		<cfoutput>
+		<cfswitch expression=#forward_count#>
+			<cfcase value = 0>
+				<div class="forward1">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset forward_count += 1>
+			</cfcase>
+			<cfcase value = 1>
+				<div class="forward2">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset forward_count += 1>
+			</cfcase>
+			<cfcase value = 2>
+				<div class="forward3">
+					<img src="../resources/images/playerpics/#last_name#.png" width="100px" height="100px" />
+					<figcaption id="caption">#last_name#</figcaption>
+				</div>
+				<cfset forward_count += 1>
+			</cfcase>
+		</cfswitch>
+		</cfoutput>
+	</cfloop>
 </div>
 	
 	

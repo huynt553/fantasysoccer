@@ -47,11 +47,30 @@
 }
 
 .midfielder2 {
-	right: 35%;
+	right: 40%;
 }
 
 .midfielder3 {
-	right: 55%;
+	right: 65%;
+}
+
+.forward1, .forward2, .forward3 {
+	position: absolute;
+    z-index: 1;
+    bottom: 66%;
+}
+
+.forward1 {
+	right: 10%;
+}
+
+.forward2 {
+	bottom: 74%;
+	right: 40%;
+}
+
+.forward3 {
+	right: 70%;
 }
 
 #caption {
