@@ -12,7 +12,17 @@
 <div id="header"></div>
 
 <cfinclude template="navigation.cfm">
-		
+<form name="create_team" action="myteam2.cfm" method="post">
+<div id="formsheet">
+	
+	<label>Username: </label>
+	<input type="text" name="Username"><br>
+	
+	<label>Password: </label>
+	<input type="password" name="Password"><br><br>
+	<input type="submit" value="Submit">
+</div>
+</form>
 
 </body>
 </html>
