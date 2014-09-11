@@ -11,6 +11,17 @@
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 <script type='text/javascript'>//<![CDATA[
 $(window).load(function(){
+
+var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+
 $('select.changeStatus').change(function(){
 
     // You can access the value of your select field using the .val() method
@@ -146,7 +157,8 @@ $(function () {
 		</cfquery>
 		
 		<div class="CSSTableGenerator">
-			<table>
+		<input type="text" id="search" placeholder="Type to search">
+			<table id="table">
 					<tr>
 						<th>Last Name</th>
 						<th>First Name</th>
