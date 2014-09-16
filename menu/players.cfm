@@ -9,7 +9,6 @@
 <link href="../resources/style_sheets/fsstyle.css" type=text/css rel=stylesheet>
 </head>
 <body>
-<div id="header"></div>
 
 <cfinclude template="navigation.cfm">
 		

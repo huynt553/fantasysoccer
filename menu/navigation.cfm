@@ -1,3 +1,21 @@
+<cfinclude template="../resources/components/Application.cfm">
+
+
+<div id="header">
+	<cfquery name="get_user_id" datasource="soccer">
+		SELECT username
+		FROM users
+		WHERE user_id = #Session.user_id#
+	</cfquery>
+
+	<cfoutput>
+		<div id="login_corner">
+			Logged in as #get_user_id.username#
+		</div>
+	</cfoutput>
+</div>
+
+
 <div id="navigation">
 	<cfif #find("league",CGI.PATH_TRANSLATED)# IS NOT 0>
 		<div class="activelink"><a href="league.cfm">League</a></div>

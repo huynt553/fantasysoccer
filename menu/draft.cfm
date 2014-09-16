@@ -90,7 +90,6 @@ $(function () {
 
 </script>
 <body>
-<div id="header"></div>
 
 <cfinclude template="navigation.cfm">
 

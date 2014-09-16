@@ -26,3 +26,4 @@ Pushing from Home
 - [ ] Make the table bigger / more user friendly
 - [x] Include team crest in player info
 - [ ] Change backend to use player_id as primary key not last_name
+- [ ] Keep user logged in

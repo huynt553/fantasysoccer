@@ -15,7 +15,6 @@ function goBack() {
 </script>
 </head>
 <body>
-<div id="header"></div>
 
 <cfinclude template="navigation.cfm">
 

@@ -26,7 +26,9 @@ a:hover {
 
 #header {
 	background-image: url("../images/banner.png");
-	width: 728px;
+	background-repeat: no-repeat;
+	/*width: 1300px;*/
+	width: 96%;
 	height: 90px;
 }
 
@@ -202,4 +204,12 @@ select {
 	margin-bottom: 4%; 
 	padding: 2px 3px; 
 	width: 209px;
+}
+
+#login_corner {
+	float: right;
+	margin-left: 50%;
+	height: 50px;
+	width: 209px;
+	border: 1px solid white;
 }
