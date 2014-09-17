@@ -28,3 +28,4 @@ Pushing from Home
 - [ ] Change backend to use player_id as primary key not last_name
 - [x] Keep user logged in
 - [ ] Image stats overlay on player
+- [ ] Matchup with categories
