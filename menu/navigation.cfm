@@ -10,7 +10,7 @@
 
 	<cfoutput>
 		<div id="login_corner">
-			Logged in as #get_user_id.username#
+			<a id="logout_link" href="logout.cfm">Logged in as #get_user_id.username#</a>
 		</div>
 	</cfoutput>
 </div>
@@ -24,9 +24,9 @@
 	</cfif>
 	
 	<cfif #find("myteam",CGI.PATH_TRANSLATED)# IS NOT 0>
-		<div class="activelink"><a href="myteam.cfm">My Team</a></div>
+		<div class="activelink"><a href="myteam2.cfm">My Team</a></div>
 	<cfelse>
-		<div><a href="myteam.cfm">My Team</a></div>
+		<div><a href="myteam2.cfm">My Team</a></div>
 	</cfif>
 	
 	<cfif #find("matchup",CGI.PATH_TRANSLATED)# IS NOT 0>

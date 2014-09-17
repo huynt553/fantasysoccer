@@ -21,7 +21,7 @@
        	<!--- this user is not logged in, alert user and redirect to the login.cfm page --->
            <script>
            	alert("You must login to access this area!");
-               self.location="../resources/components/login.cfm";
+               self.location="../menu/myteam.cfm";
            </script>
        </cfif>
    </cfif>

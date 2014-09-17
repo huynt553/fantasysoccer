@@ -11,6 +11,10 @@ body {
 	color: white;
 }
 
+#logout_link {
+	color: white;
+}
+
 a:link {
 	color: #333333;
 	text-decoration: underline;
@@ -211,5 +215,5 @@ select {
 	margin-left: 50%;
 	height: 50px;
 	width: 209px;
-	border: 1px solid white;
 }
+

@@ -21,7 +21,7 @@ function goBack() {
 <cfquery name="get_user_info" datasource="soccer">
 	SELECT user_id 
 	FROM users 
-	WHERE (username = '#Username#' AND password = '#Password#')
+	WHERE user_id = '#Session.user_id#'
 </cfquery>
 
 <cfif #get_user_info.RecordCount# EQ 0>
