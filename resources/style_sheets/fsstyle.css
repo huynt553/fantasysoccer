@@ -217,3 +217,11 @@ select {
 	width: 209px;
 }
 
+#scoreboard {
+	width: 55%;
+	height: 120px;
+	margin: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
