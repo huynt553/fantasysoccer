@@ -29,3 +29,4 @@ Pushing from Home
 - [x] Keep user logged in
 - [ ] Image stats overlay on player
 - [ ] Matchup with categories
+- [ ] Goalie stats

@@ -12,6 +12,12 @@
 
 <cfinclude template="navigation.cfm">
 
+<cfquery name="MyTeamName" datasource="soccer">
+	SELECT name 
+	FROM teams
+	WHERE user_id = #Session.user_id#
+</cfquery>
+
 <div id="scoreboard"> <!--- Show scoreboard ---> 
 	<table border="1px">
 		<tr>
@@ -53,7 +59,47 @@
 	</table>
 </div>
 
+<cfquery name="get_team1" datasource="soccer">
+	SELECT name
+	FROM teams
+	WHERE user_id = #Session.user_id#
+</cfquery>
+
+<cfquery name="get_team1_stats" datasource="soccer">
+	SELECT *
+	FROM `#get_team1.name#`
+</cfquery>
+
 <div id="team1"> <!--- Get current user's team --->
+	<table border="1px">
+		<tr>
+			<th colspan="9"><cfoutput>#MyTeamName.name#</cfoutput></th>
+		</tr>
+		<tr>
+			<th>Players</th>
+			<th>Goals</th>
+			<th>Assists</th>
+			<th>YC</th>
+			<th>RC</th>
+			<th>SPG</th>
+			<th>Pass %</th>
+			<th>CS</th>
+			<th>Saves</th>
+		</tr>
+		<cfoutput query="get_team1_stats">
+			<tr>
+				<td><cfif #FirstName# NEQ "N/A">#FirstName#</cfif> #LastName#</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</cfoutput>
+	</table>
 </div>
 
 <div id="team2"> <!--- Get current user's opposition team --->
