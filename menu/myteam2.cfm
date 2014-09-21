@@ -45,6 +45,7 @@ function goBack() {
 			FROM `#get_team_name.name#` t1
 			JOIN players p ON p.last_name = t1.LastName
 			WHERE position = 'Goalkeeper'
+			LIMIT 1
 		</cfquery>
 		
 		<cfquery name="get_defenders" datasource="soccer">
