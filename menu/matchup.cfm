@@ -26,7 +26,7 @@
 			<th>Assists</th>
 			<th>Yellow Cards</th>
 			<th>Red Cards</th>
-			<th>Shots Per Game</th>
+			<th>Shots On Target</th>
 			<th>Pass Percentage</th>
 			<th>Clean Sheets</th>
 			<th>Saves</th>
@@ -38,7 +38,7 @@
 			<td>27</td>
 			<td>3</td>
 			<td>1</td>
-			<td>3.1</td>
+			<td>16</td>
 			<td>81.9</td>
 			<td>2</td>
 			<td>5</td>
@@ -50,7 +50,7 @@
 			<td>30</td>
 			<td>1</td>
 			<td>1</td>
-			<td>3.5</td>
+			<td>22</td>
 			<td>85.6</td>
 			<td>1</td>
 			<td>3</td>

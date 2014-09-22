@@ -21,11 +21,7 @@
 		<div><a href="league.cfm">League</a></div>
 	</cfif>
 	
-	<cfif #find("myteam",CGI.PATH_TRANSLATED)# IS NOT 0>
-		<div class="activelink"><a href="myteam2.cfm">My Team</a></div>
-	<cfelse>
 		<div><a href="myteam2.cfm">My Team</a></div>
-	</cfif>
 	
 	<cfif #find("matchup",CGI.PATH_TRANSLATED)# IS NOT 0>
 		<div class="activelink"><a href="matchup.cfm">Matchup</a></div>
@@ -60,6 +56,8 @@
 	<label>Password: </label>
 	<input type="password" name="user_pass"><br><br>
 	<input type="submit" value="Submit">
+	<p>Not registered yet? Create a team here!</p>
+	<button type="submit" formaction="create_team.cfm">Register</button>
 </div>
 </form>
 
