@@ -261,3 +261,35 @@ select {
 	width: 100%;
 }
 
+#InputSection {
+	padding-top: 10px;
+}
+
+#InputBox {
+	right: 0px;
+	padding: 5px 10px !important;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF4DA;
+	background-color: #FFD265;
+	border-radius: 3px;
+	text-shadow: 1px 1px #C2A04D;
+	cursor: pointer;
+	border: 0px none;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5) inset;
+}
+
+#userName {
+	display: inline-block;
+	height: 30px;
+	position: relative;
+	font-size: 20px;
+	font-family: Alegreya Sans;
+	margin-right: 8px;
+	color: #000;
+	border-radius: 5px;
+	padding-left: 14px;
+	border: 1px solid #CCC;
+	box-sizing: border-box;
+}
+
